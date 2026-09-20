@@ -30,3 +30,7 @@ __pycache__/
 .venv
 env/
 venv/2
+
+# videos to ignore
+*.mp4
+*0919(1).mp4

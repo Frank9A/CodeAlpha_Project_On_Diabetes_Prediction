@@ -8,13 +8,13 @@ loaded_model = joblib.load('diabetes_model.pkl')
 # These columns must match the exact order and name  of the original dataset
 new_patient_data = pd.DataFrame([{
     'Pregnancies': 2,
-    'Glucose': 145,
-    'BloodPressure': 82,
+    'Glucose': 195,
+    'BloodPressure': 92,
     'SkinThickness': 25,
-    'Insulin': 120,
-    'BMI': 29.5,
+    'Insulin': 150,
+    'BMI': 60.5,
     'DiabetesPedigreeFunction': 0.45,
-    'Age': 41
+    'Age': 61
 }])
 
 #3. Ask the loaded model to predict the outcome

@@ -7,6 +7,8 @@ df = pd.read_csv('ddataset.csv')
 print(df.head())
 print(df.describe())
 
+print("\n--- Zero values Count ---")
+print((df==0).sum())
 
 #STEP 1 Data Cleaning
 columns_to_fix = ["Glucose", "BloodPressure", "SkinThickness", "Insulin", "BMI"]
@@ -62,14 +64,14 @@ accuracy = accuracy_score(y_test, y_pred)
 print('\n--- Tuned Final Exam Results ---')
 print(f"New Model Accuracy: {accuracy * 100:.2f}%")
 
-# # 1. Ask the model to predict outcome fot the testing data
-# y_pred = model.predict(X_test)
+# 1. Ask the model to predict outcome fot the testing data
+y_pred = model.predict(X_test)
 
-# # 2. Compare the model's Predictions (y_pred) to the actual answers (y_test)
-# accuracy = accuracy_score(y_test, y_pred)
+# 2. Compare the model's Predictions (y_pred) to the actual answers (y_test)
+accuracy = accuracy_score(y_test, y_pred)
 
-# print("\n--- Fianl Exam Results ---")
-# print(f"Model Accuracy: {accuracy * 100:.2f}%")
+print("\n--- Fianl Exam Results ---")
+print(f"Model Accuracy: {accuracy * 100:.2f}%")
 
 print(y_pred)
 
